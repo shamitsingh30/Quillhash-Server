@@ -12,6 +12,11 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(bodyParser.json());
 
+const socketServer = require('http').createServer(app);
+const socket = require('./config/socket').socket(socketServer);
+socketServer.listen(5000);
+console.log('socket server is listening on port 5000');
+
 app.use('/', require('./routes'));
 
 app.listen(port, function(err){
