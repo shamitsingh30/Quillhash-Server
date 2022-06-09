@@ -33,13 +33,16 @@ module.exports.socket = function(socketServer){
 
         socket.on("sendNotification", async ({senderName, receiverName, type})=>{
 
-            actionController.action(senderName, receiverName, type);
-
+            var actionInfo = await actionController.action(senderName, receiverName, type);
+            console.log(actionInfo);
             const receiver = getUser(receiverName);
+            
             io.to(receiver.socketId).emit("getNotification", {
-                senderName,
+                name: actionInfo.name,
+                liked: actionInfo.liked,
                 type
             })
+            
         })
 
         socket.on('disconnect', function(){
