@@ -3,22 +3,22 @@ const User = require('./user');
 
 const userSchema = new mongoose.Schema({
     user: {
-        type: String,
-        ref: 'User'
+        type: mongoose.Schema.Types.ObjectId,
+        // refPath: 'User'
     },
     like: [
         {
-            type: String
+            type: mongoose.Schema.Types.ObjectId,
         }
     ],
     superLike: [
         {
-            type: String
+            type: mongoose.Schema.Types.ObjectId
         }
     ],
     block: [
         {
-            type: String
+            type: mongoose.Schema.Types.ObjectId
         }
     ]
 }, {

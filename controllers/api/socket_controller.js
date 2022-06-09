@@ -5,7 +5,7 @@ module.exports.action = async function(senderId, receiverId, type){
 
     var liked = false;
     var name = {_id: '1', name:"Someone"};
-    if(type == 1){
+    if(type == 'superliked'){
         name = await User.findOne({_id: senderId}, 'name');
     }
     try{
@@ -14,6 +14,7 @@ module.exports.action = async function(senderId, receiverId, type){
         if(image){
             if(type == 'superliked'){
                 if(image.superLike.find(el => el == senderId)){
+                    // image.superLike.pull(senderId);
                     image.superLike.pull(senderId);
                 }
                 else{
@@ -50,9 +51,10 @@ module.exports.action = async function(senderId, receiverId, type){
                 newImage.like.push(senderId);
             }
             else if(type == 'blocked'){
-                newImage.push.push(senderId);
+                newImage.block.push(senderId);
             }
             newImage.save();
+            await User.findByIdAndUpdate(receiverId, {action: newImage._id});
             liked = true;
             console.log(newImage);
         }

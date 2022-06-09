@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Action = require('./actions');
 
 const userSchema = new mongoose.Schema({
     email: {
@@ -17,7 +18,12 @@ const userSchema = new mongoose.Schema({
     imageUrl:{
         type: String,
         required: true
-    }
+    },
+    action: 
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Action'
+        }
 }, {
     timestamps: true
 });
