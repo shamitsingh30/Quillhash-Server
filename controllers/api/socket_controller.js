@@ -13,33 +13,33 @@ module.exports.action = async function(senderId, receiverId, type){
         
         if(image){
             if(type == 'superliked'){
-                if(image.superLike.find(el => el == senderId)){
-                    // image.superLike.pull(senderId);
+                if(image.superLike.includes(senderId)){
                     image.superLike.pull(senderId);
                 }
                 else{
                     image.superLike.push(senderId);
                     liked = true;
                 }
-                image.save();
             }
             else if(type == 'liked'){
-                if(image.like.find(el => el == senderId)){
+                if(image.like.includes(senderId)){
                     image.like.pull(senderId);
                 }
                 else{
                     image.like.push(senderId);
                     liked = true;
                 }
-                image.save();
             }
             else if(type == 'blocked'){
-                if(image.block.find(el => el == senderId)){
+                if(image.block.includes(senderId)){
                     image.block.pull(senderId);
                 }
-                else image.block.push(senderId);
-                image.save();
+                else{
+                    image.block.push(senderId);
+                    liked = true
+                }
             }
+            image.save();
             console.log(image);
         }
         else{

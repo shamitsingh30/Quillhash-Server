@@ -4,7 +4,6 @@ const User = require('./user');
 const userSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        // refPath: 'User'
     },
     like: [
         {

@@ -37,12 +37,13 @@ module.exports.socket = function(socketServer){
             console.log(actionInfo);
             const receiver = getUser(receiverName);
             
-            io.to(receiver.socketId).emit("getNotification", {
+            if(receiver){
+                io.to(receiver.socketId).emit("getNotification", {
                 name: actionInfo.name,
                 liked: actionInfo.liked,
                 type
-            })
-            
+                })
+            }
         })
 
         socket.on('disconnect', function(){

@@ -1,0 +1,44 @@
+[
+    {
+        "email" : "shamit.singh61@gmail.com",
+        "password" : "1234",
+        "name" : "Shamit",
+        "imageUrl" : "https://blog.cloudflare.com/content/images/speedy-gonzales.jpeg.scaled500.jpg"
+    },
+    {
+        "email" : "tonystark@gmail.com",
+        "password" : "1234",
+        "name" : "Tony Stark",
+        "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnhJhKYNJgiOAonQKYsr4pkXhsuVhjbjxGpxBDP0fZZH1MPn0TYSj9InhjowNPEy4IsMc&usqp=CAU"
+    },
+    {
+        "email" : "captainamerica@gmail.com",
+        "password" : "1234",
+        "name" : "Captain America",
+        "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUQ4QRs-iIosagFT_Exocc8M7cSY10uiYZlkzBiTd-d4bcn_CXe8iPUNPBIAgRDX8orWI&usqp=CAU"
+    },
+    {
+        "email" : "blackwidow@gmail.com",
+        "password" : "1234",
+        "name" : "Black Widow",
+        "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEz14m-reyndYBbF0ch1EB-Hv0vnITPWpyJg&usqp=CAU"
+    },
+    {
+        "email" : "sonofodin@gmail.com",
+        "password" : "1234",
+        "name" : "Thor",
+        "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI89v28K-eMcUC1aO8jVLXZlC8hVXAiOQSOLZaBU25wukCOLOClMKKuvnrO1xODyjMKHs&usqp=CAU"
+    },
+    {
+        "email" : "hawkeye@gmail.com",
+        "password" : "1234",
+        "name" : "Hawk Eye",
+        "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOrTC_1VhaDz3ffckbVA8N3BG4MbD37pau0Ptd62sPQEM7QSPU6TKdyZ4icJzjKmmB8mA&usqp=CAU"
+    },
+    {
+        "email" : "bigguy@gmail.com",
+        "password" : "1234",
+        "name" : "Hulk",
+        "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThg49wez7hoLnGqzTSVU9i2R3aqoxi6XsUWtp9rkBuohV4ET5yiOnHBIYmzOMsLrSg0Xo&usqp=CAU"
+    }
+]
