@@ -5,7 +5,9 @@ const data = require('../assets/authenticatedUsers.json');
 const User = require('../models/user');
 const db = require('../config/mongoose');
 
-User.deleteMany({ });
+User.deleteMany({}, function(err){
+    if(err) console.log(err);
+});
 
 User.insertMany(data, function(err, r){
     if(err){
